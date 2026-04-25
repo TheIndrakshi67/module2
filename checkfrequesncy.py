@@ -1,0 +1,16 @@
+
+test_dict = {'Codingal': 3, 'is': 2, 'best': 2, 'for': 2, 'Coding': 1}
+
+
+print("Test Dictionary:", test_dict)
+
+
+val = int(input("Enter the value to check the frequency of: "))
+
+
+count = 0
+for key in test_dict:
+    if test_dict[key] == val:
+        count += 1
+
+print(f"The frequency of {val} is: {count}")
