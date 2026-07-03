@@ -25,4 +25,29 @@ go_button.pack()
 result_lbl=Label(window,text="")
 result_lbl.pack()
 
+def subtract_number():
+    n01=int(boxx1.get())
+    n02=int(boxx2.get())
+    ttotal=n01 - n02
+    resultlbl.config(text="The difference is: "+ str(ttotal))
+window=Tk()
+window.title("Subtraction")
+window.geometry("300x200")
+
+labl1=Label(window, text="Type Number 1: ")
+labl1.pack()
+boxx1=Entry(window)
+boxx1.pack()
+
+labl2=Label(window, text="Type number 2: ")
+labl2.pack()
+boxx2=Entry(window)
+boxx2.pack()
+
+gobutton=Button(window, text="Subtract", command=subtract_number)
+gobutton.pack()
+
+resultlbl=Label(window,text="")
+resultlbl.pack()
+
 window.mainloop()
