@@ -50,4 +50,31 @@ gobutton.pack()
 resultlbl=Label(window,text="")
 resultlbl.pack()
 
+
+def calculate_bmi():
+    weight=float(bmi_box1.get())
+    height=float(bmi_box2.get())
+    bmi_total=weight / (height * height)
+    bmi_result_lbl.config(text="The BMI index is: "+ str(round(bmi_total, 2)))
+window=Tk()
+window.title("BMI Calculator")
+window.geometry("300x200")
+
+bmi_lbl1=Label(window, text="Enter Weight (kg): ")
+bmi_lbl1.pack()
+bmi_box1=Entry(window)
+bmi_box1.pack()
+
+bmi_lbl2=Label(window, text="Enter Height (meters): ")
+bmi_lbl2.pack()
+bmi_box2=Entry(window)
+bmi_box2.pack()
+
+bmi_button=Button(window, text="Calculate BMI", command=calculate_bmi)
+bmi_button.pack()
+
+bmi_result_lbl=Label(window,text="")
+bmi_result_lbl.pack()
+
+
 window.mainloop()
